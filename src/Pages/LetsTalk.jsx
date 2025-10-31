@@ -5,7 +5,7 @@ const LetsTalk = () => {
   return (
     <div className='min-h-screen bg-black'>
         <div className='relative bg-transparent'>
-            <div className='absolute md:w-250 h-100 w-80 bg-green-400 blur-[100px] left-1/2 top-60 transform -translate-x-1/2 z-0'></div>
+            <div className='absolute md:w-250 h-130 w-80 bg-green-400 blur-[100px] left-1/2 top-60 transform -translate-x-1/2 z-0'></div>
             <div className='relative z-10'>
         <div className='flex justify-center'>
                         <div>

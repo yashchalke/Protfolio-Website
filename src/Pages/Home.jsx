@@ -6,16 +6,29 @@ import Certifications from "./Certifications";
 import Education from "./Education";
 import LetsTalk from "./LetsTalk";
 import { Download } from "lucide-react";
+import { useEffect } from "react";
 const Home = () => {
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const target = document.querySelector(hash);
+      if (target) {
+        setTimeout(() => {
+          target.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, []);
+
   return (
-    <div className="bg-black min-h-screen relative ">
-      <div className="absolute md:top-20 md:right-60 right-20 top-30 transform -translate-x-1/2 -translate-y-1/2 z-20">
+    <div className="bg-black min-h-full relative scroll-mt-100" id="home">
+      <div className="absolute md:top-20 lg:right-60 right-20 top-30 transform -translate-x-1/2 -translate-y-1/2 z-20">
       <img src="/Logos/cursor.svg" className="h-10 md:h-15"/>
   </div>
 
       
-      <div className="text-white poppins-regular ">
-        <h1 className="flex justify-center md:text-5xl text-xl">Hey, There</h1>
+      <div className="text-white poppins-regular">
+        <h1 className="flex justify-center md:text-5xl text-xl ">Hey, There</h1>
         <h1 className="flex justify-center md:text-5xl text-3xl md:mt-5 mt-2 word-space">
           I Am
           <div className="text-green-400 ml-3">
@@ -65,19 +78,19 @@ const Home = () => {
       <div>
         <InfiniteCarousal />
       </div>
-      <div>
+      <div id="Projects" className="scroll-mt-20">
         <Projects />
       </div>
-      <div>
+      <div id="skills" className="scroll-mt-20">
         <Skills />
       </div>
-      <div>
+      <div id="certifications" className="scroll-mt-20">
         <Certifications />
       </div>
       {/* <div>
         <Education />
       </div> */}
-      <div>
+      <div id="letstalk" className="scroll-mt-20">
         <LetsTalk />
       </div>
     </div>

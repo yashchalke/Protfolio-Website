@@ -132,3 +132,16 @@
   margin: 0;
 }
 
+.nav-link {
+  position: relative;
+}
+
+:target ~ .nav-link[href="#home"],
+:target ~ .nav-link[href="#projects"],
+:target ~ .nav-link[href="#skills"],
+:target ~ .nav-link[href="#certifications"],
+:target ~ .nav-link[href="#education"] {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: #4ade80; /* Tailwind green-400 */
+}

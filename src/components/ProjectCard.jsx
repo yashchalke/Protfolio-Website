@@ -1,16 +1,32 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const ProjectCard = ({Title,TextColor}) => {
+const ProjectCard = ({ Title, TextColor, projectId, Description, Techstack }) => {
   return (
-    <div className='h-fit w-fit md:h-[400px] md:w-[400px] border-4 border-green-400 rounded-2xl p-1 bg-gray-200 flex flex-col flex-y-wrap'>
-        <div className='md:h-40 h-[17vh] rounded-2xl flex justify-center items-center'>
-            <h1 className='md:text-4xl text-xl poppins-semibold' style={{color:TextColor}}>{Title}</h1>
-        </div>
-        <div className='p-4 poppins-regular flex flex-col gap-2'>
-          <p className='text-sm text-justify'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui quas maiores unde voluptatum! Error sed tempora vero dolore labore sequi, vel illo rerum quod natus? Voluptate vero exercitationem aliquam minus.</p>
-          <p className='poppins-semibold'>MongoDb, React.js, Express.js, Node.js</p>
-          <a className='bg-green-400 rounded-full text-center p-3 poppins-semibold hover:bg-green-500 hover:cursor-pointer'>View</a>
-        </div>
+    <div className="w-[400px] max-h-[500px] border-4 border-green-400 rounded-2xl p-4 bg-gray-200 flex flex-col justify-between">
+      
+      {/* Title Section */}
+      <div className="flex justify-center items-center h-20">
+        <h1 className="text-xl md:text-3xl poppins-semibold" style={{ color: TextColor }}>
+          {Title}
+        </h1>
+      </div>
+
+      {/* Description & Techstack */}
+      <div className="flex-grow overflow-y-auto md:max-h-[350px] flex flex-col gap-2 poppins-regular mb-4">
+        <p className="text-[12px] md:text-[15px] text-justify leading-relaxed whitespace-pre-line">
+          {Description}
+        </p>
+        <p className="poppins-semibold">{Techstack}</p>
+      </div>
+
+      {/* View Button */}
+      <Link
+        to={`/project/${projectId}`}
+        className="bg-green-400 rounded-full text-center p-3 poppins-semibold hover:bg-green-500 hover:cursor-pointer"
+      >
+        View
+      </Link>
     </div>
   )
 }

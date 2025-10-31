@@ -32,10 +32,30 @@ const Projects = () => {
             </svg>
             </div>
                     </div>
-                    <div className='flex items-center justify-center flex-wrap gap-x-10 gap-y-5 md:pl-20 md:pr-20 p-10' >
-                    <ProjectCard Title="Restro Occupancy" TextColor="#000000"/>
-                    <ProjectCard Title="Shop E-Commerce" TextColor={"#000000"}/>
-                    <ProjectCard Title="NexEd" TextColor={"#000000"}/>
+                    <div className='flex items-center justify-center flex-wrap gap-x-10 gap-y-5 md:pl-20 md:pr-20 p-10 h-fit' >
+                    <ProjectCard 
+                    Title="Restro Occupancy" 
+                    TextColor="#000000" 
+                    projectId="1"
+                    Description={`- Developed a restaurant management system with computer vision-based occupancy detection.
+                                  - Implemented real-time waitlist management and dashboard.
+                                  - Enabled MySQL-backed user authentication and data storage.
+                                  - Designed for efficient table allocation and resource utilization.`}
+
+                    Techstack=" Python, MySQL, HTML, CSS, JavaScript"
+                    
+                    />
+                    <ProjectCard 
+                    Title="Shop E-Commerce"
+                     TextColor={"#000000"}
+                      projectId="2"
+                      Description= {`- Built a full-stack Responsive e-commerce platform with user and admin authentication.
+                                    - Integrated Stripe Payment Gateway for secure transactions.
+                                    - Added product filtering, real-time search, and persistent cart logic.
+                                    - Developed admin dashboard for inventory and sales management using CRUD operations.`}
+                      Techstack="JavaScript, React.js, Node.js, Express.js, MongoDB, Tailwind CSS"
+                      />
+                    {/* <ProjectCard Title="NexEd" TextColor={"#000000"} projectId="3"/> */}
                     
                     </div>
                 </div>
