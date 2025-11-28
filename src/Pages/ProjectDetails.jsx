@@ -23,6 +23,12 @@ const ProjectDetails = () => {
       github: "https://github.com/yashchalke/E-Commerce-Website",
       video: "https://youtu.be/tlJQY0v9iuU",
     },
+    3: {
+      title: "Dev Events - Event Management App",
+      techStack: "JavaScript, React.js, Node.js, Express.js, MongoDB, Tailwind CSS, Clerk Auth, HTML5-QRCode.",
+      github: "https://github.com/yashchalke/Dev-events-project",
+      video: "https://youtu.be/VpQFlhGxC-M",
+    },
   };
 
   const project = projectData[projectId];

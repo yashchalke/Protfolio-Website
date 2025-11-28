@@ -34,6 +34,17 @@ const Projects = () => {
                     </div>
                     <div className='flex items-center justify-center flex-wrap gap-x-10 gap-y-5 md:pl-20 md:pr-20 p-10 h-fit' >
                     <ProjectCard 
+                    Title="Dev Events"
+                     TextColor={"#000000"}
+                      projectId="3"
+                      Description= {`- Developed a full-stack event management system using MERN stack and Clerk.
+                                    - Implemented dynamic QR code generation and in-browser camera scanning.
+                                    - Enabled secure user authentication and cloud-based media optimization.
+                                    - Designed a responsive interface for efficient event listing and booking.`}
+                      Techstack="JavaScript, React.js, Node.js, Express.js, MongoDB"
+                      />
+
+                    <ProjectCard 
                     Title="Restro Occupancy" 
                     TextColor="#000000" 
                     projectId="1"
@@ -55,6 +66,8 @@ const Projects = () => {
                                     - Developed admin dashboard for inventory and sales management using CRUD operations.`}
                       Techstack="JavaScript, React.js, Node.js, Express.js, MongoDB, Tailwind CSS"
                       />
+
+                    
                     {/* <ProjectCard Title="NexEd" TextColor={"#000000"} projectId="3"/> */}
                     
                     </div>

@@ -13,7 +13,7 @@ const ProjectCard = ({ Title, TextColor, projectId, Description, Techstack }) =>
       </div>
 
       {/* Description & Techstack */}
-      <div className="flex-grow overflow-y-auto md:max-h-[350px] flex flex-col gap-2 poppins-regular mb-4">
+      <div className="flex-grow overflow-y-auto md:max-h-[350px] flex flex-col gap-2 poppins-regular mb-4 no-scrollbar">
         <p className="text-[12px] md:text-[15px] text-justify leading-relaxed whitespace-pre-line">
           {Description}
         </p>
